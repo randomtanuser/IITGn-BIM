@@ -1,6 +1,6 @@
 #Image processing - class-1
 ##-- For comments. 
-
+#:/user/bin/python
 #Import blocks
 import matplotlib.pyplot as plt
 from scipy import misc, ndimage
