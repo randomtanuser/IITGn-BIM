@@ -11,3 +11,6 @@ brain.shape
 plt.imshow(brain,cmap='Greys_r')
 plt.show()
 
+# Histogram
+plt.hist(brain, bins=10)
+plt.show()
