@@ -6,3 +6,8 @@ plt.show()
 
 # Dimensions of the image
 brain.shape
+
+# Grey scale image
+plt.imshow(brain,cmap='Greys_r')
+plt.show()
+
