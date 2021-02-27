@@ -1,5 +1,6 @@
 # Reading the Image
 import matplotlib.pyplot as plt
+from scipy import misc,ndimage
 brain=plt.imread("Brain.jpg")
 plt.imshow(brain)
 plt.show()
@@ -13,4 +14,11 @@ plt.show()
 
 # Histogram
 plt.hist(brain, bins=10)
+plt.show()
+
+# Sigma 5 gaussian filter and Histogram
+brain_sigma5=ndimage.gaussian_filter(brain, sigma=5)
+plt.imshow(brain_sigma5, cmap='Greys_r')
+plt.show()
+plt.hist(brain_sigma5, bins=10)
 plt.show()
