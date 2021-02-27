@@ -1,0 +1,5 @@
+#Reading the Image
+import matplotlib.pyplot as plt
+brain=plt.imread("Brain.jpg")
+plt.imshow(brain)
+plt.show()
