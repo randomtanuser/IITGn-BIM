@@ -21,3 +21,17 @@ lastLog = logging.LogFile(Name +timestamp+".log", level=logging.INFO, filemode='
 #Monitor and window specifications
 mywin = visual.Window([1366, 768], monitor="New", units="deg", color = 'black',)
 kb = keyboard.Keyboard()
+
+#Intructions for the participants
+Participant_Instruction = visual.TextStim(mywin, text =''' 
+Welcome! 
+Instructions: 
+    1. You will be shown an experimental set of four shapes with colours. Please look at them carefully. 
+    2. You will then be presented with another shape. You are required to ignore this. 
+    3. A final image will be shown. Please report whether this image was present in the set of first four images.
+    4. Press 1 for "Yes" and 2 for "No"', 
+''')   
+Participant_Instruction.draw()
+mywin.update()
+Subject_Response = event.waitKeys(keyList=['1', '2'])
+print(Subject_Response)
