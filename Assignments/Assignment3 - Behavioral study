@@ -85,3 +85,13 @@ start.draw()
 for frame in range(150):
     start.draw()
     mywin.update()
+    
+#Showing the test cue and answer
+testcue = visual.ImageStim(win=mywin, image="redcircle.png", size=10, pos=[0,0], units="deg")
+answer = visual.TextStim(mywin, text ='Was this image present in the first set of images?', pos=[0, 10])
+for frame in range(150):
+    testcue.draw()
+    answer.draw()
+    mywin.update()
+Subject_Response = event.waitKeys(keyList=['1', '2'])
+print(Subject_Response)
