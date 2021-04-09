@@ -42,3 +42,11 @@ start.draw()
 for frame in range(100):
     start.draw()
     mywin.update()
+    
+#Trial 1 - Plausible suffix
+trial_1 = visual.TextStim(mywin, text ='''Trial 1
+Ready?''')
+for frame in range(150):
+    trial_1.draw()
+    mywin.update()
+
