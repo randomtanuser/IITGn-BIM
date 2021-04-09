@@ -202,3 +202,12 @@ for frame in range(150):
     mywin.update()
 Subject_Response = event.waitKeys(keyList=['1', '2'])
 print(Subject_Response)
+
+#Thank you message
+thankmsg = visual.TextStim(mywin, text = 'Thank you for your participation!')
+for frame in range(150):
+   thankmsg.draw()
+   mywin.update()
+
+mywin.close()
+core.quit()
