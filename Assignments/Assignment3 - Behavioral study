@@ -35,3 +35,10 @@ Participant_Instruction.draw()
 mywin.update()
 Subject_Response = event.waitKeys(keyList=['1', '2'])
 print(Subject_Response)
+
+#Initial Blank screen; to focus on the center
+start = visual.TextStim(mywin, text = '+')
+start.draw()
+for frame in range(100):
+    start.draw()
+    mywin.update()
