@@ -1,0 +1,7 @@
+#Importing the required libraries. 
+from psychopy import visual, core, logging, event
+from datetime import datetime
+from psychopy.hardware import keyboard
+from psychopy import gui
+
+
