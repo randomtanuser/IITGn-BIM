@@ -12,3 +12,8 @@ participant.show()
 if participant.OK:
     Name = participant.data[0]
 print(Name)
+
+# Set logging level and create log file with timestamp
+timestamp=datetime.now().strftime("%Y%m%d-%H%M%S")
+lastLog = logging.LogFile(Name +timestamp+".log", level=logging.INFO, filemode='w')
+# Here the 'name' variable form the participant info is added to the name of the logfile. 
