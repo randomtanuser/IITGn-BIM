@@ -4,4 +4,11 @@ from datetime import datetime
 from psychopy.hardware import keyboard
 from psychopy import gui
 
-
+#Add participant information
+participant = gui.Dlg(title = "Participant info")
+participant.addText('Please fill in your name:')
+participant.addField('Name:')
+participant.show()
+if participant.OK:
+    Name = participant.data[0]
+print(Name)
