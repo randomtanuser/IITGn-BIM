@@ -17,3 +17,7 @@ print(Name)
 timestamp=datetime.now().strftime("%Y%m%d-%H%M%S")
 lastLog = logging.LogFile(Name +timestamp+".log", level=logging.INFO, filemode='w')
 # Here the 'name' variable form the participant info is added to the name of the logfile. 
+
+#Monitor and window specifications
+mywin = visual.Window([1366, 768], monitor="New", units="deg", color = 'black',)
+kb = keyboard.Keyboard()
