@@ -49,4 +49,18 @@ Ready?''')
 for frame in range(150):
     trial_1.draw()
     mywin.update()
+    
+#Experimental set: introduce four image as a stimulation
+redcircle = visual.ImageStim(win=mywin, image="redcircle.png", size=10, pos=[-10,-8], units="deg")
+yellowspark = visual.ImageStim(win=mywin, image="yellowspark.png", size=10, pos=[-10,8], units="deg")
+purpletriangle = visual.ImageStim(win=mywin, image="purpletriangle.png", size=10, pos=[10,-8], units="deg")
+limehexagon = visual.ImageStim(win=mywin, image="limehexagon.png", size=10, pos=[10,8], units="deg")
+
+# Stimulus shown for 5s, refresh rate = 50Hz
+for frame in range(250):
+   redcircle.draw()
+   yellowspark.draw()
+   purpletriangle.draw()
+   limehexagon.draw()
+   mywin.update()
 
