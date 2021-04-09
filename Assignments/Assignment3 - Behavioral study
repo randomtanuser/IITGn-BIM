@@ -49,6 +49,7 @@ Ready?''')
 for frame in range(150):
     trial_1.draw()
     mywin.update()
+   
     
 #Experimental set: introduce four image as a stimulation
 redcircle = visual.ImageStim(win=mywin, image="redcircle.png", size=10, pos=[-10,-8], units="deg")
@@ -63,4 +64,12 @@ for frame in range(250):
    purpletriangle.draw()
    limehexagon.draw()
    mywin.update()
+   
+   
+ #Blank screen after array stimuli
+start = visual.TextStim(mywin, text = '+')
+start.draw()
+for frame in range(100):
+    start.draw()
+    mywin.update()
 
