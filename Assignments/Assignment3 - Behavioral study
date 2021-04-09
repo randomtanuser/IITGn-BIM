@@ -73,3 +73,8 @@ for frame in range(100):
     start.draw()
     mywin.update()
 
+# Showing the plausible stimuli
+psuffix = visual.ImageStim(win=mywin, image="orangeoval.png", size=10, pos=[0,0], units="deg")
+for frame in range(50):
+    psuffix.draw()
+    mywin.update()
