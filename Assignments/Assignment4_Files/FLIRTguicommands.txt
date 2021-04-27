@@ -1,0 +1,13 @@
+Flirt commands: 
+
+# Mean functional image to anatomical image 
+
+/usr/local/fsl/bin/flirt -in /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/mean_func.nii.gz -ref /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/structural_brain.nii.gz -out /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/meanfunc2struct -omat /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/meanfunc2struct.mat -bins 256 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 12  -interp trilinear
+
+# Applying transformation matrix to thresh_zstat1.nii.gz
+
+/usr/local/fsl/bin/flirt -in /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/thresh_zstat1.nii.gz -applyxfm -init /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/meanfunc2struct.mat -out /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/thresh1_transform -paddingsize 0.0 -interp trilinear -ref /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/structural_brain.nii.gz
+
+# Applying transformation matrix to thresh_zstat2.nii.gz
+
+/usr/local/fsl/bin/flirt -in /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/thresh_zstat2.nii.gz -applyxfm -init /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/meanfunc2struct.mat -out /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/FEAT_data.feat/thresh2_transform -paddingsize 0.0 -interp trilinear -ref /mnt/e/GDriveIITGN/Brain_Imaging/fmri1/fsl_course_data/fmri1/fluency_task/structural_brain.nii.gz
